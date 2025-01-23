@@ -1,0 +1,78 @@
+:root {
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --primary: #2AB9E1; /* Light Blue */
+  --primary-dark: #032252; /* Navy Blue */
+  --primary-foreground: #ffffff;
+  --muted-foreground: #6c757d;
+  --border: #dee2e6;
+  --destructive: #dc3545;
+  --destructive-foreground: #ffffff;
+  --radius: 0.5rem;
+}
+
+.course-progress-tracker {
+  padding: 2rem;
+  background-color: var(--background);
+  border-radius: var(--radius);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s;
+}
+
+.course-progress-tracker:hover {
+  transform: translateY(-0.5rem);
+}
+
+.progress-list {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.progress-item {
+  background-color: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.progress-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.progress-bar {
+  height: 0.5rem;
+  background-color: var(--muted);
+  border-radius: var(--radius);
+  overflow: hidden;
+  margin-bottom: 0.5rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background-color: var(--primary);
+  transition: width 0.2s;
+}
+
+.progress-meta {
+  display: flex;
+  justify-content: space-between;
+  color: var(--muted-foreground);
+}
+
+.lessons,
+.time-left {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.lessons-icon,
+.time-icon {
+  font-size: 1.25rem;
+}

@@ -1,0 +1,80 @@
+export const SAMPLE_COURSES = [
+  {
+    id: 1,
+    title: "Complete Web Development Bootcamp",
+    description: "Learn full-stack web development from scratch with modern technologies",
+    image_url: "https://images.unsplash.com/photo-1617854818583-09e7f077a156?w=800&auto=format&fit=crop",
+    category: "programming",
+    level: "intermediate",
+    duration: "48 hours",
+    students_count: 15420,
+    rating: 4.8,
+    instructor: "Sarah Johnson",
+    progress: 0
+  },
+  {
+    id: 2,
+    title: "UI/UX Design Masterclass",
+    description: "Master modern design principles and create stunning user interfaces",
+    image_url: "https://images.unsplash.com/photo-1561070791-2526d30994b5?w=800&auto=format&fit=crop",
+    category: "design",
+    level: "beginner",
+    duration: "32 hours",
+    students_count: 8750,
+    rating: 4.9,
+    instructor: "Michael Chen",
+    progress: 0
+  },
+  {
+    id: 3,
+    title: "Advanced Data Science with Python",
+    description: "Deep dive into data analysis, machine learning, and AI",
+    image_url: "https://images.unsplash.com/photo-1527474305487-b87b222841cc?w=800&auto=format&fit=crop",
+    category: "programming",
+    level: "advanced",
+    duration: "56 hours",
+    students_count: 6230,
+    rating: 4.7,
+    instructor: "Dr. Emily White",
+    progress: 0
+  },
+  {
+    id: 4,
+    title: "Digital Marketing Strategy",
+    description: "Learn to create and execute effective digital marketing campaigns",
+    image_url: "https://images.unsplash.com/photo-1557838923-2985c318be48?w=800&auto=format&fit=crop",
+    category: "marketing",
+    level: "intermediate",
+    duration: "28 hours",
+    students_count: 9840,
+    rating: 4.6,
+    instructor: "Alex Martinez",
+    progress: 0
+  },
+  {
+    id: 5,
+    title: "Business Leadership & Management",
+    description: "Develop essential leadership skills for modern business",
+    image_url: "https://images.unsplash.com/photo-1552664730-d307ca884978?w=800&auto=format&fit=crop",
+    category: "business",
+    level: "advanced",
+    duration: "40 hours",
+    students_count: 7320,
+    rating: 4.8,
+    instructor: "Lisa Thompson",
+    progress: 0
+  },
+  {
+    id: 6,
+    title: "Mobile App Development with React Native",
+    description: "Build cross-platform mobile apps with React Native",
+    image_url: "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=800&auto=format&fit=crop",
+    category: "programming",
+    level: "intermediate",
+    duration: "44 hours",
+    students_count: 5180,
+    rating: 4.7,
+    instructor: "David Kim",
+    progress: 0
+  }
+];

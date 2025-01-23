@@ -1,0 +1,162 @@
+.navbar {
+  background: var(--card);
+  border-bottom: 1px solid var(--border);
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 1rem 2rem;
+}
+
+.navbar-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 4rem;
+}
+
+.navbar-logo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--primary);
+}
+
+.logo-icon {
+  width: 2rem;
+  height: 2rem;
+  color: var(--primary);
+}
+
+.navbar-logo img.logo-icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+
+.logo-text {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background: var(--gradient);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.navbar-links {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  padding: 0.75rem 1.25rem;
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+  color: var(--foreground);
+  background: none;
+  border: none;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.nav-button::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transform-origin: right;
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+  z-index: -1;
+}
+
+.nav-button:hover::before {
+  transform-origin: left;
+  transform: scaleX(1);
+}
+
+.nav-button:hover {
+  background: linear-gradient(135deg, 
+    rgba(var(--primary-rgb), 0.05), 
+    rgba(var(--accent-rgb), 0.05));
+  transform: translateY(-2px);
+  color: var(--accent-foreground);
+}
+
+.nav-button.active {
+  background: linear-gradient(135deg, 
+    rgba(var(--primary-rgb), 0.1), 
+    rgba(var(--accent-rgb), 0.1));
+  font-weight: 600;
+  color: var(--primary);
+}
+
+.nav-button.active::before {
+  transform: scaleX(1);
+  height: 3px;
+}
+
+.nav-button.active::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg,
+    rgba(var(--primary-rgb), 0.1),
+    rgba(var(--accent-rgb), 0.1));
+  border-radius: var(--radius);
+  z-index: -1;
+}
+
+.nav-button.active svg {
+  color: var(--primary);
+  transform: scale(1.1);
+}
+
+.nav-button::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 50%;
+  transform: translateX(-50%) scaleX(0);
+  width: 80%;
+  height: 2px;
+  background: var(--primary);
+  transition: transform 0.3s ease;
+}
+
+.nav-button.active::after {
+  transform: translateX(-50%) scaleX(1);
+}
+
+.nav-button svg {
+  color: var(--primary);
+  transition: all 0.3s ease;
+}
+
+.nav-button span {
+  margin-left: 0.5rem;
+  position: relative;
+}
+
+.notification-popup {
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: 0 8px 30px rgba(51, 24, 79, 0.08);
+  padding: 1rem;
+  z-index: 20;
+}

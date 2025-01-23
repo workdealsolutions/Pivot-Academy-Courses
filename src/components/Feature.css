@@ -1,0 +1,43 @@
+:root {
+  --background: #ffffff;
+  --foreground: #1f2937;
+  --card: #ffffff;
+  --primary: #2AB9E1; /* Light Blue */
+  --primary-dark: #032252; /* Navy Blue */
+  --primary-foreground: #ffffff;
+  --muted-foreground: #6c757d;
+  --border: #dee2e6;
+  --destructive: #dc3545;
+  --destructive-foreground: #ffffff;
+  --radius: 0.5rem;
+}
+
+.feature {
+  background-color: var(--card);
+  padding: 1rem;
+  border-radius: var(--radius);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  transition: transform 0.2s;
+}
+
+.feature:hover {
+  transform: translateY(-0.5rem);
+}
+
+.feature-icon {
+  font-size: 2rem;
+  color: var(--primary);
+  margin-bottom: 0.5rem;
+}
+
+.feature h3 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+  color: var(--foreground);
+}
+
+.feature p {
+  color: var(--muted-foreground);
+}

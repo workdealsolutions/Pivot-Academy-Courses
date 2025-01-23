@@ -1,0 +1,238 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+  padding: 2rem;
+}
+
+.home-container {
+  width: 100%;
+  max-width: 1200px; /* Increased from 28rem */
+  margin: 0 auto;
+}
+
+.content-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem; /* Increased gap */
+  padding: 2rem;
+}
+
+.auth-container {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.features-container {
+  padding: 3rem;
+  background: var(--gradient);
+  border-radius: var(--radius);
+  box-shadow: 0 20px 40px rgba(51, 24, 79, 0.1);
+  position: relative;
+  overflow: hidden;
+  height: fit-content;
+}
+
+.features-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(45deg, rgba(42, 185, 225, 0.1) 0%, rgba(162, 70, 225, 0.1) 100%);
+  backdrop-filter: blur(10px);
+}
+
+.features-content {
+  position: relative;
+  z-index: 1;
+  color: white;
+}
+
+.features-content h2 {
+  font-size: 2.5rem; /* Increased from 1.5rem */
+  font-weight: 800;
+  margin-bottom: 2rem;
+  line-height: 1.2;
+  background: linear-gradient(135deg, #ffffff 0%, #e2e8f0 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.features-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem; /* Increased padding */
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius);
+  backdrop-filter: blur(8px);
+  transition: transform 0.2s;
+  font-size: 1rem; /* Increased from 0.85rem */
+}
+
+.feature-item:hover {
+  transform: translateX(10px);
+}
+
+.feature-icon {
+  background: rgba(255, 255, 255, 0.2);
+  padding: 0.75rem; /* Increased from 0.5rem */
+  border-radius: 50%;
+}
+
+.feature-text h3 {
+  font-size: 1.25rem; /* Increased from 1rem */
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.feature-text p {
+  font-size: 1rem; /* Increased from 0.8rem */
+  opacity: 0.9;
+}
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .home-container {
+    max-width: 95%;
+    flex-direction: column;
+    padding: 1rem;
+    gap: 2rem;
+  }
+
+  .features-container {
+    padding: 2rem;
+  }
+
+  .features-content h2 {
+    font-size: 2rem;
+  }
+
+  .auth-container {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .content-wrapper {
+    gap: 2rem;
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Animation keyframes */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.features-content, .auth-container {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+/* Add subtle hover effects */
+.features-container:hover {
+  transform: translateY(-5px);
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 640px) {
+  .home {
+    padding: 1rem;
+  }
+
+  .features-container {
+    padding: 1.5rem;
+  }
+
+  .features-content h2 {
+    font-size: 1.75rem;
+  }
+
+  .content-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* New styles for greeting and popup animation */
+.greeting-section {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeDown 0.8s ease-out forwards;
+}
+
+.greeting-section h1 {
+  font-size: 3.5rem;
+  font-weight: 800;
+  background: linear-gradient(135deg, #2563eb 0%, #7c3aed 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  margin-bottom: 1rem;
+}
+
+.intro-text {
+  font-size: 1.2rem;
+  color: #64748b;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+.popup {
+  animation: popUp 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.8) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+@keyframes fadeDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Update existing responsive styles */
+@media (max-width: 768px) {
+  .greeting-section h1 {
+    font-size: 2.5rem;
+  }
+  
+  .intro-text {
+    font-size: 1rem;
+    padding: 0 1rem;
+  }
+}
